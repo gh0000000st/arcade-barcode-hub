@@ -60,7 +60,7 @@ class CardComponent extends HTMLElement {
 
   render() {
     if (!this._data) return;
-
+    console.log(this._data);
     const dino = this._data;
     const card = this._shadow.querySelector("#card");
     const existingStats = this.querySelector('[slot="stats"]');
@@ -75,26 +75,33 @@ class CardComponent extends HTMLElement {
       this.appendChild(statsHeader);
     }
 
-    if (dino.cardType?.toLowerCase() === "move") {
-      card.classList.add("move");
+    if (dino.card_type?.toLowerCase() === "move") {
+      //  card.classList.add("move");
+      console.log(dino.stats?.sign[0].toLowerCase());
+      this._shadow
+        .querySelectorAll("span.attack.stat")
+        .forEach((el) =>
+          el.querySelector("p").id != dino.stats?.sign[0].toLowerCase()
+            ? el.remove()
+            : "",
+        );
     }
 
     this._shadow.getElementById("name").textContent = dino.name;
     this._shadow.getElementById("game").textContent =
       dino.compat != "" ? dino.compat : "N/A";
-    this._shadow.getElementById("img").setAttribute("src", dino.img_url);
-    this._shadow.getElementById("img").setAttribute("alt", dino.name);
-    this._shadow.getElementById("img").classList.add(dino.sign);
     this._shadow.getElementById("type").textContent = dino.type;
-    this._shadow.getElementById("rock").textContent =
-      dino.stats.attack != undefined ? dino.stats.attack.Rock : 0;
-    this._shadow.getElementById("paper").textContent =
-      dino.stats.attack != undefined ? dino.stats.attack.Paper : 0;
-    this._shadow.getElementById("scissors").textContent =
-      dino.stats.attack != undefined ? dino.stats.attack.Scissors : 0;
-
+    if (dino.card_type?.toLowerCase() != "move") {
+      this._shadow.getElementById("rock").textContent =
+        dino.stats.attack != undefined ? dino.stats.attack.Rock : 0;
+      this._shadow.getElementById("paper").textContent =
+        dino.stats.attack != undefined ? dino.stats.attack.Paper : 0;
+      this._shadow.getElementById("scissors").textContent =
+        dino.stats.attack != undefined ? dino.stats.attack.Scissors : 0;
+    }
+    card.classList.add(dino.sign);
     if (dino.cardCode && dino.cardCode !== "undefined") {
-      card.classList.add(dino.cardCode);
+      // card.classList.add(dino.cardCode);
     } else {
       card.classList.add("empty-card-code");
     }

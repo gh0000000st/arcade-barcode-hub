@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
       storage.push(newValue);
     }
-    console.log(storage);
     storageHandler.setDataFromLocalStorage(
       `dino-collection-${filterIndex}`,
       JSON.stringify(storage),

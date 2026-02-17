@@ -1,23 +1,5 @@
 [
-  {
-    "name": "Card",
-    "type": "Type",
-    "stats": {
-      "sign": [],
-      "strength": [],
-      "tech": []
-    },
-    "sign": "fire",
-    "card_type": "dino",
-    "usage": [],
-    "effect": [],
-    "card_code": "Code",
-    "img_url": "./cards_img/default.webp",
-    "compat": "Compatibility",
-    "system": "dino_king",
-    "id": 0
-  },
-  {
+    {
     "name": "Tyrannosaurus",
     "type": "Attack",
     "stats": {
@@ -35,7 +17,7 @@
     "usage": [],
     "effect": [],
     "card_code": "SEGA6SBDGRE2",
-    "img_url": "./cards_img/default.webp",
+    "img_url": "./cards_img/1.webp",
     "compat": "ODR",
     "system": "dino_king",
     "id": 1

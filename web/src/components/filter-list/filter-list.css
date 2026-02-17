@@ -1,10 +1,24 @@
 .inline-router {
-  background-color: red;
+  background-color: var(--background-color);
   display: flex;
 }
 .filter-wrapper {
   padding: 15px;
+  cursor: pointer;
 }
 .active {
-  background-color: blue;
+  cursor: default;
+  background-color: var(--accent-color);
+}
+section {
+  border: 1px solid var(--accent-color);
+  display: flex;
+}
+button {
+  margin-left: auto;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
 }

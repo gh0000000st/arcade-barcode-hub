@@ -1,20 +1,19 @@
-<div id="addCollection">
-  <button>&#128151;</button>
-</div>
-
-<div id="card" class="card">
+<div class="card-wrapper">
+  <!--</div>
+<footer class="card-footer">
+</footer>
+  -->
+  <div id="card" class="card"></div>
   <header class="card-header">
     <div class="stats-bar">
       <slot name="stats"></slot>
       <span id="name" class="card-title"></span>
     </div>
   </header>
+  <span id="type" class="type"></span>
+  <span id="game" class="game"></span>
+
   <section class="card-body">
-    <span id="game" class="game"></span>
-    <img id="img" src="../cards_img/default.webp" alt="" class="card-image" />
-    <span id="type" class="type"></span>
-  </section>
-  <footer class="card-footer">
     <span class="attack stat"
       ><img src="../assets/signs/rock.png" />
       <p id="rock"></p>
@@ -27,5 +26,22 @@
       ><img src="../assets/signs/scissors.png" />
       <p id="scissors"></p>
     </span>
-  </footer>
+  </section>
+
+  <svg class="bar">
+    <rect x="250" y="25" width="100" height="10" fill="black" />
+    <rect x="250" y="40" width="100" height="5" fill="black" />
+    <rect x="250" y="50" width="100" height="5" fill="black" />
+    <rect x="250" y="60" width="100" height="10" fill="black" />
+    <rect x="250" y="75" width="100" height="10" fill="black" />
+    <rect x="250" y="95" width="100" height="5" fill="black" />
+    <rect x="250" y="105" width="100" height="5" fill="black" />
+    <rect x="250" y="120" width="100" height="10" fill="black" />
+    <rect x="250" y="140" width="100" height="5" fill="black" />
+    <rect x="250" y="155" width="100" height="5" fill="black" />
+    <rect x="250" y="165" width="100" height="5" fill="black" />
+  </svg>
+  <div id="addCollection">
+    <button>&#128151;</button>
+  </div>
 </div>
