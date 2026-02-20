@@ -16,6 +16,7 @@ class CommunicationClient {
 
       const json = await response.json();
     } catch (error) {
+      alert(error.message);
       console.error(error.message);
     }
   }
