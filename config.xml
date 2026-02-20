@@ -1,11 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.hidbarcodeemulator.esp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>HID Barcode Emulator for Flycast</name>
-  <description>ESP32 based BarCode Emulator Client</description>
-  <author email="dev@example.com">Your Name</author>
-  <content src="index.html" />
-  <preference name="SplashScreen" value="screen" />
-  <preference name="SplashScreenDelay" value="2000" />
-  <preference name="AutoHideSplashScreen" value="true" />
-</widget>
+<widget id="com.hidbarcodeemulator.esp" version="1.0.0" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"> <name>HID Barcode Emulator for Flycast</name>
+    <description>ESP32 based BarCode Emulator Client</description>
+    <author email="dev@example.com">Your Name</author>
+    
+    <content src="index.html" />
 
+    <access origin="*" />
+    <allow-navigation href="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        
+        <preference name="Scheme" value="https" />
+        <preference name="Hostname" value="localhost" />
+    </platform>
+</widget>
