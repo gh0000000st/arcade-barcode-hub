@@ -7,6 +7,7 @@
     </base-config>
 
     <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
         <domain includeSubdomains="true">192.168.2.131:80</domain> <!--Ip address-->
         <domain includeSubdomains="true">192.168.2.131:80/api/barcode</domain> <!--Ip address-->
     </domain-config>
