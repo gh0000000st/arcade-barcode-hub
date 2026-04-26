@@ -1,18 +1,22 @@
-.stats {
-  transform: skewX(345deg);
+section {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+span {
+  border: 3px solid black;
+  width: 150px;
+  text-align: center;
+  border-top: none;
 }
 
 span.strength.stat {
   background-color: red;
-  color: white;
-  font-weight: bold;
   padding: 2px;
 }
 
-
 span.tech.stat {
-  background-color: var(--accent-color);
-  color: white;
-  font-weight: bold;
+  background-color: #eec72d;
+  border-left: none;
   padding: 2px;
 }

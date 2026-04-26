@@ -1,47 +1,58 @@
-<div class="card-wrapper">
-  <!--</div>
+<!--</div>
 <footer class="card-footer">
 </footer>
   -->
-  <div id="card" class="card"></div>
+<div id="card" class="card">
   <header class="card-header">
-    <div class="stats-bar">
-      <slot name="stats"></slot>
-      <span id="name" class="card-title"></span>
-    </div>
+    <span id="name" class="card-title"></span>
+    <span id="stat-sign" class="stat-sign"></span>
   </header>
-  <span id="type" class="type"></span>
-  <span id="game" class="game"></span>
+  <div class="stats-bar">
+    <slot name="stats"></slot>
+  </div>
 
   <section class="card-body">
-    <span class="attack stat"
-      ><img src="../assets/signs/rock.png" />
-      <p id="rock"></p>
+    <span class="content">
+      <span class="attack stat"><img src="../assets/signs/rock.png" />
+        <p id="rock"></p>
+      </span>
+      <span class="attack stat"><img src="../assets/signs/paper.png" />
+        <p id="paper"></p>
+      </span>
+      <span class="attack stat"><img src="../assets/signs/scissors.png" />
+        <p id="scissors"></p>
+      </span>
+      <section class="attr">
+        <span id="game" class="game"></span>
+        <span id="type" class="type"></span>
+      </section>
+      <section class="buttons">
+        <div id="addCollection">
+          <button>&#128151;</button>
+        </div>
+        <div id="sendToGame">
+          <button><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg></button>
+        </div>
+      </section>
     </span>
-    <span class="attack stat"
-      ><img src="../assets/signs/paper.png" />
-      <p id="paper"></p>
-    </span>
-    <span class="attack stat"
-      ><img src="../assets/signs/scissors.png" />
-      <p id="scissors"></p>
-    </span>
+    <span class="compat">
+      <div class="stack" data-index="1">
+      </div>
+      <div class="stack" data-index="2">
+      </div>
+      <div class="stack" data-index="3">
+      </div>
+      <div class="stack" data-index="4">
+      </div>
+      <div class="stack" data-index="5">
+      </div>
+      <div class="stack" data-index="6">
+      </div>
+
+
   </section>
 
-  <svg class="bar">
-    <rect x="250" y="25" width="100" height="10" fill="black" />
-    <rect x="250" y="40" width="100" height="5" fill="black" />
-    <rect x="250" y="50" width="100" height="5" fill="black" />
-    <rect x="250" y="60" width="100" height="10" fill="black" />
-    <rect x="250" y="75" width="100" height="10" fill="black" />
-    <rect x="250" y="95" width="100" height="5" fill="black" />
-    <rect x="250" y="105" width="100" height="5" fill="black" />
-    <rect x="250" y="120" width="100" height="10" fill="black" />
-    <rect x="250" y="140" width="100" height="5" fill="black" />
-    <rect x="250" y="155" width="100" height="5" fill="black" />
-    <rect x="250" y="165" width="100" height="5" fill="black" />
-  </svg>
-  <div id="addCollection">
-    <button>&#128151;</button>
-  </div>
 </div>
