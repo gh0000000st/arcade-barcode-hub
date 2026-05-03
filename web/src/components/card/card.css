@@ -132,3 +132,14 @@ section span {
 .compat-value {
   background: orange;
 }
+
+#addCollection {
+  cursor: pointer;
+}
+
+#sendToGame {
+  cursor: pointer;
+}
+.buttons > div > button {
+  cursor: pointer;
+}
